@@ -38,7 +38,7 @@ $db = new Database;
     </nav>
 
     <div style="position: absolute; top: 90px; right: 50px;">
-        <?php if (isset($_GET['message']) && $_GET['message'] == "true") { ?>
+        <?php if (isset($_GET['message']) && $_GET['message'] == "delete") { ?>
             <div class="alert alert-success d-flex align-items-center" role="alert" style="width: fit-content;">
                 <i data-feather="check-circle"></i>
                 <div style="margin-left: 20px;">
@@ -48,6 +48,29 @@ $db = new Database;
 
         <?php
             header("refresh:1.5; url=mahasiswa.php");
+        } ?>
+
+        <?php if (isset($_GET['message']) && $_GET['message'] == "edit") { ?>
+            <div class="alert alert-success d-flex align-items-center" role="alert" style="width: fit-content;">
+                <i data-feather="check-circle"></i>
+                <div style="margin-left: 20px;">
+                    Data mahasiswa berhasil diubah
+                </div>
+            </div>
+
+        <?php
+            header("refresh:2; url=mahasiswa.php");
+        } ?>
+
+        <?php if (isset($_GET['message']) && $_GET['message'] == "add") { ?>
+            <div class="alert alert-success d-flex align-items-center" role="alert" style="width: fit-content;">
+                <i data-feather="check-circle"></i>
+                <div style="margin-left: 20px;">
+                    Data mahasiswa berhasil ditambahkan
+                </div>
+            </div>
+        <?php
+            header("refresh:2; url=mahasiswa.php");
         } ?>
     </div>
 

@@ -28,7 +28,7 @@ class Database {
 
     public function addMahasiswa($nim, $nama, $alamat)
     {
-        $query = "INSERT INTO mahasiswa VALUES (0, '$nama', '$nim', '$alamat')";
+        $query = "INSERT INTO mahasiswa VALUES (0, '$nim', '$nama', '$alamat')";
 
         $result = mysqli_query($this->koneksi, $query);
     }

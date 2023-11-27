@@ -22,20 +22,6 @@ $db = new Database;
     <?php foreach ($db->edit($_GET['id']) as $mahasiswa) { ?>
         <div style="display: flex; justify-content: center; align-items: center;">
             <div class="pt-5" style="width: 75%;">
-                <div style="position: absolute; top: 40px; right: 50px;">
-                    <?php if (isset($_GET['message']) && $_GET['message'] == "true") { ?>
-                        <div class="alert alert-success d-flex align-items-center" role="alert" style="width: fit-content;">
-                            <i data-feather="check-circle"></i>
-                            <div style="margin-left: 20px;">
-                                Data mahasiswa berhasil diubah
-                            </div>
-                        </div>
-
-                    <?php
-                        header("refresh:2; url=mahasiswa.php");
-                    } ?>
-                </div>
-
                 <h3>Edit Mahasiswa</h3>
                 <form style="margin-top: 30px;" action="/PWEB2/jobsheet4/views/proses_mhs.php?aksi=update" method="post">
                     <div class="mb-3">
