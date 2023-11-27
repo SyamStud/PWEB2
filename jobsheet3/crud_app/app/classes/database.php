@@ -76,8 +76,6 @@ class Database
 
 
 
-
-
     public function getDosen()
     {
         $hasil = array();

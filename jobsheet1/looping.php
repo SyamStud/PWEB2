@@ -23,25 +23,27 @@
     }
 
     echo "<br/><br/> Bilangan prima dari 1 hingga 20 <br/>";
-    $angka = 1;
+    $num = 1;
 
-    do {
-        $isPrime = true;
-        $i = 2;
-
-        do {
-            if ($angka % $i == 0) {
-                $isPrime = false;
-            }
-            $i++;
-        } while ($i <= sqrt($angka));
-
-        if ($isPrime) {
-            echo $angka . " ";
+    function isPrime($num)
+    {
+        if ($num <= 1) {
+            return false;
         }
 
-        $angka++;
-    } while ($angka <= 20);
+        for ($i = 2; $i <= sqrt($num); $i++) {
+            if ($num % $i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    for ($angka = 1; $angka <= 20; $angka++) {
+        if (isPrime($angka)) {
+            echo $angka . " ";
+        }
+    }
     ?>
 </body>
 
