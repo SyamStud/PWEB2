@@ -11,7 +11,6 @@
 
 <body>
     <?php
-
     if (isset($_POST['bilangan1'])) {
         $bil1 = $_POST['bilangan1'];
         $bil2 = $_POST['bilangan2'];
@@ -21,8 +20,6 @@
             return "Hasilnya = " . $bil1 + $bil2;
         }
     }
-
-
     ?>
 
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 100px;">

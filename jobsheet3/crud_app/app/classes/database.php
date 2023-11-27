@@ -1,6 +1,7 @@
-<?php 
+<?php
 
-class Database {
+class Database
+{
     protected $koneksi;
     protected $host = "localhost";
     protected $username = "root";
@@ -28,12 +29,25 @@ class Database {
 
     public function addMahasiswa($nim, $nama, $alamat)
     {
-        $query = "INSERT INTO mahasiswa VALUES (0, '$nama', '$nim', '$alamat')";
+        $query = "INSERT INTO mahasiswa VALUES (0, '$nim', '$nama', '$alamat')";
 
         $result = mysqli_query($this->koneksi, $query);
     }
 
-    public function edit($id)
+    public function getEditMahasiswa($id)
+    {
+        $query = "SELECT * FROM mahasiswa where id = '$id'";
+
+        $result = mysqli_query($this->koneksi, $query);
+
+        while ($d = mysqli_fetch_array($result)) {
+            $hasil[] = $d;
+        }
+
+        return $hasil;
+    }
+
+    public function getEditDosen($id)
     {
         $query = "SELECT * FROM dosen where id = '$id'";
 
@@ -112,5 +126,3 @@ class Database {
         $result = mysqli_query($this->koneksi, $query);
     }
 }
-
-?>

@@ -18,7 +18,7 @@ $db = new Database;
 </head>
 
 <body>
-    <?php foreach ($db->edit($_GET['id']) as $dosen) { ?>
+    <?php foreach ($db->getEditDosen($_GET['id']) as $dosen) { ?>
         <div style="display: flex; justify-content: center; align-items: center;">
             <div style="width: 75%; margin-top: 50px;">
                 <h3>Edit Dosen</h3>

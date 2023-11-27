@@ -22,7 +22,7 @@ $syam = new Mahasiswa;
 echo $syam->tampil_nama() . "<br />";
 echo $syam->tampil_alamat() . "<br />" ;
 
-class Dosen
+class Dosen1
 {
     private $nidn = "220102046";
     private $nama = "Syam Chaidayatullah";
@@ -40,6 +40,6 @@ class Dosen
 
 echo "<br /><h3>Class Dosen</h3>";
 
-$syam = new Dosen;
-echo $syam->tampil_nama() . "<br />";
-echo $syam->tampil_prodi() . "<br />" ;
+$syam2 = new Dosen1;
+echo $syam2->tampil_nama() . "<br />";
+echo $syam2->tampil_prodi() . "<br />" ;
